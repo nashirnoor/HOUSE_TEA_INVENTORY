@@ -53,6 +53,8 @@ const LoginPage = () => {
         console.log("Login form submitted:", values);
         await dispatch(loginUser(values)).unwrap();
         // Navigation will be handled by the useEffect hook
+        console.log("Backend API response:", response);
+
       } catch (error) {
         console.error("Login failed:", error);
         // Error handling is managed by the Redux state
